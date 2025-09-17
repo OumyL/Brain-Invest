@@ -1,0 +1,57 @@
+{
+  "name": "brain-invest",
+  "version": "1.0.0",
+  "description": "Assistant de trading intelligent avec intégration MCP",
+  "private": true,
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "axios": "^1.8.4",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.263.1",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.8.2",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node server/server.js",
+    "mcp-bridge": "node server/mcp-bridge.js",
+    "dev": "concurrently \"npm run server\" \"npm run mcp-bridge\" \"npm start\"",
+    "backup": "node backup.js backup",
+    "restore": "node backup.js restore"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  },
+  "proxy": "http://localhost:3001"
+}
